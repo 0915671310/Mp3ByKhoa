@@ -1,0 +1,40 @@
+.ContentMusic{
+    --color-border:#ffffff;
+    --size-border:2px;
+
+    display: flex;
+    flex: 1;
+    padding: 0 8px;
+}
+
+.Avatar{
+    border :var(--size-border) solid var(--color-border);
+    &:hover{
+        animation: rotate360 10s infinite linear;
+        cursor: pointer;
+    }
+}
+
+
+
+.blockContentMusic{
+    max-width: 120px;
+}
+
+
+.contentSong{
+    max-height: 54.5px;
+    overflow: hidden;
+        
+}
+
+//animation
+@keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -1,0 +1,25 @@
+.PlayMusic {
+    display: flex;
+    flex: 2;
+    padding: 4px 8px;
+    
+}
+.PlayMusicSpace{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.PlayMusicTop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.PlayMusicBottom .ant-space{
+    display: flex;
+    justify-content: space-between;
+}
+
