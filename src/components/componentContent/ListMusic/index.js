@@ -7,7 +7,6 @@ import {
   ClockCircleOutlined,
   SmallDashOutlined,
   AppstoreOutlined,
-  MailOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
 
