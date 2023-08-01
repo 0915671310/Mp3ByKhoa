@@ -50,65 +50,7 @@ const items = [
   ),
 ];
 function MenuContent() {
-  const onClick = (e) => {
-    console.log("click ", e);
-  };
-  return (
-    <div className={cx("w-200p")}>
-      <ConfigProvider
-        theme={{
-          token: {
-            colorBgContainer: "transparent",
-            colorBgTextHover: "#424242FF",
-            colorText: "#ffffff",
-            colorTextDescription: "#ffffff",
-            fontSize: 18,
-          },
-          components: {
-            Menu: {
-              darkItemSelectedColor: "#f0f5ff",
-              itemHoverColor: "#ffffff",
-              itemSelectedColor: "#000000",
-              itemSelectedBg: "#ffffff",
-            },
-          },
-        }}
-      >
-        <Image
-          width={199}
-          height={100}
-          preview={false}
-          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-        />
-        <Menu
-          onClick={onClick}
-          style={{
-            width: 200,
-          }}
-          colorText="#fff566"
-          defaultSelectedKeys={["1"]}
-          defaultOpenKeys={["sub1"]}
-          mode="inline"
-          items={items}
-        />
-        <Card
-          hoverable
-          style={{
-            width: 200,
-            backgroundImage:
-              "url(" +
-              "https://pdp.edu.vn/wp-content/uploads/2021/06/hinh-anh-gai-xinh-deo-kinh-1.jpg" +
-              ")",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <Meta title="Europe Street beat" description="www.instagram.com" />
-        </Card>
-      </ConfigProvider>
-    </div>
-  );
+  return <ConfigProvider></ConfigProvider>;
 }
 
 export default MenuContent;
