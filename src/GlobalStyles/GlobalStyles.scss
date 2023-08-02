@@ -111,7 +111,7 @@ a {
     background-color: #ff7a45;
 }
 .w-240p{
-    width: 240px;
+    width: 400px;
     padding: 5px;
     border: 1px solid transparent;
     background-color: #ff7a45;
@@ -119,8 +119,15 @@ a {
 .contentPage{
     display:flex;
     flex: 1;
+    overflow-y: auto;
+    height: 800px;
 }
 
+.ant-tabs{
+
+    overflow-y: auto;
+    height: 800px;
+}
 
 
 .custom-scroll-container {
@@ -129,4 +136,32 @@ a {
     height: 100%;
      overflow-y: scroll; 
      flex-direction: column;
+   }
+
+
+   .ant-btn{
+    &:hover{
+        background-color: rgba(192,192,192,0.5);
+    }
+   }
+   .ant-list-item {
+    &:hover{
+        background-color: rgba(192,192,192,0.5);
+    }
+   }
+
+   .ant-avatar.isHover{
+    img{
+        transition:all 0.5s linear;
+        opacity: 1;
+        &:hover{
+            opacity: 0.3;
+        }
+    }
+    transition:all 0.5s linear;
+    opacity: 1;
+    &:hover{
+        opacity: 0.8;
+        background-color:#000000;
+    }
    }

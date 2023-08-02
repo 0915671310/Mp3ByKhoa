@@ -1,15 +1,12 @@
-.pageContent{
-    display:inline-flex;
-    flex-direction:row;
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
-
+.pageContent {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background-color: blue;
 }
 
-
-.contentPage{
-    display:flex;
-    flex: 1;
-    
+.contentPage {
+  display: flex;
+  flex: 1;
 }

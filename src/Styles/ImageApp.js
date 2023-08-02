@@ -1,4 +1,6 @@
 import { Avatar, ConfigProvider } from "antd";
+import { ButtonApp } from "./index";
+import { CaretRightOutlined } from "@ant-design/icons";
 
 const handlerShape = (e) => {
   if (e.circleSmall || e.circleMedium || e.circleBig) {
@@ -34,6 +36,7 @@ const handlerBorder = (e) => {
 
 function ImageApp({
   to,
+  isHover = false,
   disabled = false,
   circleSmall = false,
   circleMedium = false,
@@ -46,6 +49,7 @@ function ImageApp({
 }) {
   const props = {
     onClick,
+    isHover,
     ...passProps,
   };
   if (disabled) {
@@ -81,6 +85,7 @@ function ImageApp({
           border: handlerBorder(classes),
           cursor: "pointer",
         }}
+        className={isHover ? "isHover" : null}
       />
     </ConfigProvider>
   );

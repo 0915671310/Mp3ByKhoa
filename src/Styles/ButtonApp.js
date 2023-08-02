@@ -1,4 +1,4 @@
-import { Button, ConfigProvider, Space } from "antd";
+import { Button, ConfigProvider } from "antd";
 
 const handlerSize = (e) => {
   if (e.btnS) return "small";
@@ -12,6 +12,7 @@ const handlerHinh = (e) => {
 function ButtonApp({
   to,
   href,
+  fullW = false,
   btnS = false,
   btnM = false,
   btnB = false,
@@ -28,6 +29,7 @@ function ButtonApp({
   const props = {
     noBorder,
     disabled,
+    fullW,
     onClick,
     ...passProps,
   };
@@ -61,26 +63,38 @@ function ButtonApp({
           colorText: "#ffffff",
           colorBgContainerDisabled: "#808080",
           colorTextDisabled: "#fff",
-          colorBgContainer: `${noBorder ? "#66CCCC" : "transparent"}`,
-          colorBgTextHover: "#ffffff",
-          colorPrimaryActive: "#ffffff",
+          colorBgContainer: `${
+            noBorder ? "rgba(192,192,192,0.5)" : `transparent`
+          }`,
           colorBorder: `${noBorder ? "transparent" : "#ffffff"}`,
-          // colorLink: handlerColorText(classes),
-          // colorLinkHover: handlerHoverColorText(classes),
-          // fontSize: handlerFontSize(classes),
+          colorTextLightSolid: "#232323",
+        },
+        components: {
+          Button: {
+            colorPrimaryTextHover: "#454554",
+            colorPrimaryHover: "#ffffff",
+            colorBgActive: "#232323",
+            colorPrimaryActive: "#333333",
+            colorBgTextHover: "#ffffff",
+            opacityLoading: 0.6,
+            mediumDurationMid: 5,
+            mediumDurationSlow: 5,
+            colorPrimaryBgHover: "#232323",
+          },
         },
       }}
     >
-      <Space>
-        <Button
-          size={handlerSize(classes)}
-          shape={handlerHinh(classes)}
-          style={{}}
-          {...props}
-        >
-          {children}
-        </Button>
-      </Space>
+      <Button
+        size={handlerSize(classes)}
+        shape={handlerHinh(classes)}
+        block={fullW ? true : false}
+        styles={{
+          width: `${fullW ? "100%" : "auto"}`,
+        }}
+        {...props}
+      >
+        {children}
+      </Button>
     </ConfigProvider>
   );
 }
